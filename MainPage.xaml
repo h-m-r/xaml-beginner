@@ -22,10 +22,10 @@
                    Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
         <TextBlock Text="Internal Test Version" Grid.ColumnSpan="2" Grid.Row="1" FontSize="24"
                    Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
-        <TextBlock Text="**Go to Orders View**" Grid.Column="0" Grid.Row="2"
-                   Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock Text="**Submit Order**" Grid.Column="1" Grid.Row="2"
-                   Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button Content="Go to Orders View" Click="gotoOrder" Grid.Column="0" Grid.Row="2"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button Content="Submit Order" Click="gotoExpedite"  Grid.Column="1" Grid.Row="2"
+                    HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
     </Grid>
 </Page>

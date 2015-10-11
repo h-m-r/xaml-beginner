@@ -26,5 +26,15 @@ namespace RestaurantManager
         {
             this.InitializeComponent();
         }
+
+        private void gotoOrder(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(OrderPage));
+        }
+
+        private void gotoExpedite(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(ExpeditePage));
+        }
     }
 }
