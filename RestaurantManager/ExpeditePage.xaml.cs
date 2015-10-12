@@ -31,5 +31,10 @@ namespace RestaurantManager
         {
             Frame.Navigate(typeof(MainPage));
         }
+
+        private void ClearAll(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }
