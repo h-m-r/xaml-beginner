@@ -28,13 +28,13 @@
         <GridView Grid.Row="1" ItemsSource="{Binding OrderItems}" Padding="10" >
             <GridView.ItemTemplate>
                 <DataTemplate>
-                    <Grid Width="300" Height ="350" Padding="10">
+                    <Grid Width="300" Height ="375" Padding="10">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="0.15*" />
                             <RowDefinition Height="0.45*" />
                             <RowDefinition Height="0.1*" />
                             <RowDefinition Height="0.25*" />
-                            <RowDefinition Height="0.2*" />
+                            <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
                         <TextBlock Grid.Row="0" Text="{Binding Table}" FontSize="20" VerticalAlignment="Center" FontWeight="Bold" Foreground="GhostWhite"/>
                         <ListView Grid.Row="1" ItemsSource="{Binding Items}" SelectionMode="None">
@@ -46,7 +46,12 @@
                         </ListView>
                         <TextBlock Grid.Row="2" Text="Special Requerements" FontSize="18"/>
                         <TextBlock Grid.Row="3" Text="{Binding SpecialRequests}" FontSize="18" Margin="20,0,0,0"/>
-                        <Button Grid.Row="4" Content="Delete" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <Border Grid.Row="4">
+                            <Border.Background>
+                                <SolidColorBrush Color="{Binding Expedite, Converter={StaticResource BooleanToColorConverter}}" />
+                            </Border.Background>
+                        </Border>
+                        <Button Grid.Row="4" Content="Delete" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5"/>
                     </Grid>
                 </DataTemplate>
             </GridView.ItemTemplate>

@@ -3,6 +3,7 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:RestaurantManager.UniversalWindows"
+    xmlns:e="using:RestaurantManager.Extension"
     xmlns:models="using:RestaurantManager.Models"
     RequestedTheme="Dark">
     <Application.Resources>
@@ -12,5 +13,6 @@
         <Style TargetType="TextBlock">
             <Setter Property="FontSize" Value="32" />
         </Style>
+        <e:BooleanToColorConverter x:Key="BooleanToColorConverter" ColorTrue="Red" ColorFalse="Transparent" />
     </Application.Resources>
 </Application>

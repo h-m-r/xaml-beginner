@@ -3,6 +3,8 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:RestaurantManager.UniversalWindows"
+    xmlns:e="using:RestaurantManager.Extension"
+    xmlns:i="using:Microsoft.Xaml.Interactivity"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
@@ -12,7 +14,12 @@
                 <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="{TemplateBinding Foreground}" Padding="10"/>
             </Border>
         </ControlTemplate>
+        <x:String x:Key="RightClickTitle">Thank you</x:String>
+        <x:String x:Key="RightClickMessage">Thank you for your interest</x:String>
     </Page.Resources>
+    <i:Interaction.Behaviors>
+        <e:RightClickBehavior Title="{StaticResource RightClickTitle}" Message="{StaticResource RightClickMessage}"/>
+    </i:Interaction.Behaviors>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="0.40*" />
